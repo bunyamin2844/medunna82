@@ -8,7 +8,6 @@ public class Dummy {
         System.out.println("Bunyamin");
         System.out.println("Ahmet");
         System.out.println("yeni");
-
     }
 
 
