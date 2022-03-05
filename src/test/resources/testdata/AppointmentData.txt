@@ -1,0 +1,7 @@
+Appointment{firstname='Devin', lastname='Koss', ssn='294-50-4222', email='melinda.boyer@hotmail.com', phoneNumber='1-288-218-7229 x72329', date='06-07-2022'}
+Appointment{firstname='Jeanie', lastname='Goyette', ssn='775-21-4862', email='jc.bashirian@hotmail.com', phoneNumber='1-509-291-4203 x033', date='06-07-2022'}
+Appointment{firstname='Eusebio', lastname='Johns', ssn='022-60-3166', email='beckie.johnston@gmail.com', phoneNumber='177-351-2313', date='06-07-2022'}
+Appointment{firstname='Miesha', lastname='Stark', ssn='602-94-0138', email='mei.haley@yahoo.com', phoneNumber='1-113-971-4842', date='06-07-2022'}
+Appointment{firstname='Shane', lastname='Weimann', ssn='236-17-9449', email='kelle.tromp@gmail.com', phoneNumber='404.664.2497', date='06-07-2022'}
+Appointment{firstname='Brock', lastname='Blick', ssn='449-54-2635', email='jeffrey.jast@hotmail.com', phoneNumber='344-226-2204', date='06-07-2022'}
+Appointment{firstname='Delma', lastname='Walter', ssn='379-28-0615', email='dawne.bergstrom@yahoo.com', phoneNumber='(927) 421-0612', date='06-07-2022'}
