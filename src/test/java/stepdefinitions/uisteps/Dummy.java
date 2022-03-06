@@ -11,5 +11,7 @@ public class Dummy {
         //name = faker.name().firstName();
         System.out.println(name);
 
+        System.out.println("************");
+
     }
 }
