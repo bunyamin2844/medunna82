@@ -9,7 +9,7 @@ public class Dummy {
         int a = 4; //////
         //Faker  faker = new Faker();
         //name = faker.name().firstName();
-        System.out.println(name);
+        System.out.println();
 
         System.out.println("************");
 
