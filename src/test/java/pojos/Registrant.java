@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Registrant {
 
 
+
     /*
     {
   "activated": true,

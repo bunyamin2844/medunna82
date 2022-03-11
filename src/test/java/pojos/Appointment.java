@@ -3,6 +3,7 @@ package pojos;
 public class Appointment {
 
 
+
     private String firstname;
     private String lastname;
     private String ssn;
