@@ -5,6 +5,9 @@ public class Deneme {
     int b = 7;
     double c= 3.2;
     boolean x = true;
+    boolean y = false;
+
+
 
 
 }
