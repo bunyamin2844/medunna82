@@ -12,4 +12,7 @@ public class Deneme {
     int b = 7;
     double c = 3.7;
     boolean x = false;
+    ////
+    ////
+
 }
