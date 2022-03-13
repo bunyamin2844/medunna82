@@ -4,12 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import pages.PatientPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class PatInfoChangeStaffSteps {
@@ -66,5 +65,25 @@ public class PatInfoChangeStaffSteps {
     public void staffClicksSaveButton() {
         Driver.waitAndClick(page.saveButton);
     }
+
+    @And("verify the delete button is enable the displayed")
+    public void verifyTheDeleteButtonIsEnableTheDisplayed() {
+            String pageSource=Driver.getDriver().getPageSource();
+            boolean result=pageSource.contains("delete");
+            Assert.assertTrue(result==false);
+        }
+
+
+
+    @And("staff search a patient")
+    public void staffSearchAPatient() {
+        Driver.waitAndSendText(page.patientSearchBox,"319-04-4812");
+    }
+
+    @Then("verify the patient information are invoked")
+    public void verifyThePatientInformationAreInvoked() {
+        Assert.assertTrue(page.Result.isDisplayed());
+    }
+
 
 }

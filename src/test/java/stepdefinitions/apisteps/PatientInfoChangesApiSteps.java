@@ -27,10 +27,7 @@ import static utilities.WriteToTxt.savePatientData;
 public class PatientInfoChangesApiSteps {
 
     Response response;
-
-    Faker faker = new Faker();
-
-    PatientApi patient = new PatientApi();
+    Map<String,Object> expectedData;
 
     @Given("user set the necessary path params")
     public void userSetTheNecessaryPathParams() {
@@ -55,6 +52,14 @@ public class PatientInfoChangesApiSteps {
         response.prettyPrint();
 
     }
+    @And("user sets the expected data")
+    public void userSetsTheExpectedDataAnd() {
+        expectedData = new HashMap<>();
+
+        expectedData.put("firstName","Aysun");
+        expectedData.put("lastName","Yayaci");
+        expectedData.put("email","aysun@hotmail.com");
+}
 
     @And("user validates the edited data")
     public void userValidatesTheEditedData() {
@@ -72,5 +77,6 @@ public class PatientInfoChangesApiSteps {
         assertEquals(actualData.get("email"),expectedData.get("email"));
 
     }
+
 
 }

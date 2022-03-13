@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class PatientPage {
 
+
     public PatientPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -25,37 +26,23 @@ public class PatientPage {
 //    @FindBy(xpath = "//*[contains(text(),'Items&Titles')]")
 //    public WebElement ItemsTitlesDrowdown;
 
-    @FindBy(xpath = "//span[text()='MY PAGES']")
-    public  WebElement myPagesDropDown;
-
-    @FindBy(xpath="//a[@class='dropdown-item active']")
-    public WebElement PatientDropDown;
-
     @FindBy(xpath = "(//a[@href='/patient/1051'])[2]")
     public WebElement ViewButtonPatient1051;
 
     @FindBy(xpath = "(//span[@class='d-none d-md-inline'])[2]")
     public WebElement EditButtonPatient1051;
 
-    @FindBy(xpath = "//a[@href='/patient-detail/4860']")
-    public WebElement ViewButtonPatient4860;
-
-    @FindBy(xpath = "//div[@id='app-view-container']")
+    @FindBy(xpath = "(//div/table/tbody/tr/td)[2]")
     public WebElement patientPageVerifyStaff;
 
     @FindBy(xpath = "//a[@class='dropdown-item'])[1]")
     public WebElement patientButton;
-
 
     @FindBy(xpath = "//div[@id='app-view-container']")
     public WebElement patientPageVerifyAdmin;
 
     @FindBy(xpath = "(//span[text()='Edit'])[1]")
     public WebElement patientEditStaff;
-
-
-    @FindBy(xpath = "//span[text()='Patients']")
-    public WebElement patientsVerify;
 
     @FindBy(xpath = "//a[@class='page-link']")
     public WebElement lastPageNavigator;
@@ -77,8 +64,6 @@ public class PatientPage {
     public WebElement addressBox;
     @FindBy(xpath = "//*[@id='patient-description']")
     public WebElement descriptionBox;
-    @FindBy(xpath = "//*[@id='patient-user']")
-    public WebElement userPatientDropDown;
     @FindBy(xpath = "//*[@id='patient-country']")
     public WebElement countryDropDown;
     @FindBy(id = "patient-cstate")
@@ -91,7 +76,19 @@ public class PatientPage {
     public WebElement savedPatientAdmin;
     @FindBy(xpath = "//*[contains(text(),'A Patient is updated with identifier 1051')]")
     public WebElement savedToastAdmin;
+    @FindBy(xpath = "//input[@name='ssn']")
+    public WebElement patientSearchBox;
 
+    @FindBy(xpath = "//input[@name='ssn']")
+    public WebElement Result;
+
+    @FindBy(xpath = "((//a[@class='btn btn-danger btn-sm'])[5]")
+    public WebElement deleteButton;
+    @FindBy(xpath = "//button[@id='jhi-confirm-delete-patient']")
+    public WebElement deleteConfirmButton;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement deleteErrorToast;
 
 
 }
