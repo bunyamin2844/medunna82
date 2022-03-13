@@ -12,6 +12,8 @@ Feature:patient_info
     And user validates patients
     And user clicks view icon
     And user validates patient view page
+#    deneme bir ki
+#  deneme bir ki
 
   @patient_edit_and_delete_as_admin
   Scenario:TC02-Patient_info_edit_as_an_admin
