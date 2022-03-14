@@ -57,6 +57,8 @@ public class DoctorEditAppointmentPage {
     @FindBy(xpath = "//select[@id='appointment-status']/option")
     public List<WebElement> statusOptions;
 
+    //deneme
+
 
 
 

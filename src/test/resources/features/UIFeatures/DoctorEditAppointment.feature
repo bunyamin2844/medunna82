@@ -64,6 +64,7 @@ Feature: Doctor edit appointment
   @test
   Scenario: US11_07 User verifies that can only be set as PENDING, COMPLETED or CANCELLED
       #Diger adimlar background'dan
+    # Deneme
     Then verify that status can only be set as "PENDING", "COMPLETED" or "CANCELLED"
 
 

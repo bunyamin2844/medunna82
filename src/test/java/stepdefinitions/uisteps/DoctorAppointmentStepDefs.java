@@ -137,5 +137,6 @@ public class DoctorEditAppointmentStepDefs {
         //System.out.println(actualClickableStatusOptions);
 
         Assert.assertEquals(expectedClickableStatusOptions,actualClickableStatusOptions);
+        System.out.println("Deneme");
     }
 }
