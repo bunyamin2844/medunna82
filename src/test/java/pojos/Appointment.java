@@ -74,7 +74,7 @@ public class Appointment {
         this.date = date;
     }
 
-    @Override
+    @Override // methode override yapar
     public String toString() {
         return "Appointment{" +
                 "firstname='" + firstname + '\'' +
