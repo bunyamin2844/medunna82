@@ -1,3 +1,4 @@
+@Smoke
 @patient_info_changes
 Feature:patient_info
 
