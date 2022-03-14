@@ -71,6 +71,8 @@ public class UIAppointmentSteps {
 
         Driver.waitAndSendText(appointmentPage.dateTextbox, date);
 
+
+
     }
     @Then("user requests appointment and verifies the success message")
     public void user_requests_appointment_and_verifies_the_success_message() {
@@ -78,6 +80,9 @@ public class UIAppointmentSteps {
         Driver.waitAndClick(appointmentPage.requestButton);
         saveAppointData(appointment);
         Assert.assertTrue(Driver.waitForVisibility(appointmentPage.successMessageToastContainer, 5).isDisplayed());
+
+
+
     }
 
 }

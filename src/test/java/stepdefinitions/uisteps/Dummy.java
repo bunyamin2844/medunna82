@@ -7,7 +7,7 @@ public class Dummy {
     public static void main(String[] args) {
         System.out.println("Bunyamin");
         System.out.println("Ahmet");
-        System.out.println("yeni");
+
     }
 
 

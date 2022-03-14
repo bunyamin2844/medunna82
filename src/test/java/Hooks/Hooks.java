@@ -25,7 +25,7 @@ public class Hooks {
     @Before(order = 1, value = "@Appointment")
     public void navigateToLandingPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("app_url"));
 
     }
 
