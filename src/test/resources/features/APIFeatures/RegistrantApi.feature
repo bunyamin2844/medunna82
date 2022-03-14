@@ -16,4 +16,4 @@ Feature: Registrant api test
 
   Scenario:  api get request
 
-  Given
+
