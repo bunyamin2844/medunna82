@@ -25,7 +25,7 @@ public class SettingsPageSteps {
         Driver.waitAndSendText(settingsPage.password,string);
 
     }
-    @Given("user clicks sign in button")
+    @Given("user clicks sign in button.")
     public void user_clicks_sign_in_button() {
         Driver.waitAndClick(settingsPage.signInButton);
 
@@ -64,6 +64,11 @@ public class SettingsPageSteps {
     public void user_clicks_save_button() {
         settingsPage.saveButton.click();
     }
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+
+    }
+
 
 
 }
