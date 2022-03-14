@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class DoctorEditAppointmentStepDefs {
+public class DoctorAppointmentStepDefs {
 
     DoctorEditAppointmentPage dp=new DoctorEditAppointmentPage();
     Faker faker=new Faker();

@@ -6,7 +6,7 @@ Feature: Doctor login
     Given user is on the login page
     And user enters username "<username>"
     And user enters password  "<password>"
-    Then user clicks sign in button
+    Then user clicks sign in button.
     Examples:
 
       |username   |password   |

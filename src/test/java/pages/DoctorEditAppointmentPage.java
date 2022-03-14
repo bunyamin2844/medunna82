@@ -14,6 +14,7 @@ public class DoctorEditAppointmentPage {
 
     @FindBy(id = "username")
     public WebElement usernameTextBox;
+    //
 
     @FindBy(id = "password")
     public WebElement passwordTextBox;

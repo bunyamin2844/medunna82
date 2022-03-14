@@ -20,7 +20,7 @@ import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static utilities.ApiUtils.postRequest;
+//import static utilities.ApiUtils.postRequest;
 import static utilities.Authentication.generateToken;
 import static utilities.WriteToTxt.savePatientData;
 

@@ -3,7 +3,7 @@ Feature: test all registrant data
 
 
   @SmokeTest
-  @UIRegistration
+    @UIRegistration
   Scenario Outline: test registration
     Given user provides ssn id "<SSN>"
     And  user provides firstname and lastname "<firstname>" and "<lastname>"
