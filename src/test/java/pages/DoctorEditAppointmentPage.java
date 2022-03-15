@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DoctorEditAppointmentPage {
     public DoctorEditAppointmentPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -58,7 +59,7 @@ public class DoctorEditAppointmentPage {
     @FindBy(xpath = "//select[@id='appointment-status']/option")
     public List<WebElement> statusOptions;
 
-    //deneme
+
 
 
 

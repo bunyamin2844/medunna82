@@ -15,7 +15,7 @@ Feature: appointments test
     Examples: test data
     |firstname|lastname|SSN|email|phoneNumber|date|
     |Bunyamin  |bektas  |203-40-2837|b001@gmail.com|253-283-2837|03-30-2022|
-    |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|06-07-2022|
+
 
 
   @DBAppointment
