@@ -34,6 +34,7 @@ public class RegistrantApiSteps  {
 
         spec.pathParams("first", "api", "second", "register");
 
+
     }
     @Given("user sets the expected data {string}, {string} {string} {string} {string} {string} and {string}")
     public void user_sets_the_expected_data_and(String firstname, String lastname, String ssn, String email, String username, String password, String lan) {
