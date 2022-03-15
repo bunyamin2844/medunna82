@@ -24,5 +24,5 @@ Examples: test data
     Examples: test data
     #*****
       |firstname|lastname|SSN|email|phoneNumber|date|
-      |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|06-07-2022|
+      |Bunyamin  |bektas  |203-40-2837|b001@gmail.com|253-283-2837|03-30-2022|
 

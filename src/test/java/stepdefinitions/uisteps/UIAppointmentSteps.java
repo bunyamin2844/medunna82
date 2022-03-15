@@ -28,7 +28,7 @@ public class UIAppointmentSteps {
     }
     @Given("user provides the appoinment name {string}")
     public void user_provides_the_appoinment_name(String firstname) {
-        firstname = faker.name().firstName();
+        //firstname = faker.name().firstName();
         appointment.setFirstname(firstname);
 
         Driver.waitAndSendText(appointmentPage.firstnameTextbox, firstname);
@@ -36,15 +36,15 @@ public class UIAppointmentSteps {
     }
     @Given("user provides the appointment lastname {string}")
     public void user_provides_the_appointment_lastname(String lastname) {
-        lastname = faker.name().lastName();
+        //lastname = faker.name().lastName();
         appointment.setLastname(lastname);
         Driver.waitAndSendText(appointmentPage.lastnameTextbox, lastname);
 
     }
     @Given("user provides ssn and email {string} and {string}")
     public void user_provides_ssn_and_email_and(String ssn, String email) {
-        ssn = faker.idNumber().ssnValid();
-        email = faker.internet().emailAddress();
+        //ssn = faker.idNumber().ssnValid();
+       // email = faker.internet().emailAddress();
         appointment.setSsn(ssn);
         appointment.setEmail(email);
 
@@ -59,7 +59,7 @@ public class UIAppointmentSteps {
     }
     @When("user provides the phone number {string}")
     public void user_provides_the_phone_number(String phoneNumber) {
-        phoneNumber = faker.phoneNumber().cellPhone();
+       // phoneNumber = faker.phoneNumber().cellPhone();
         appointment.setPhoneNumber(phoneNumber);
 
         Driver.waitAndSendText(appointmentPage.phoneTextbox, phoneNumber);
