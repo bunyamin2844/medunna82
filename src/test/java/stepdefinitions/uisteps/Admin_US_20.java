@@ -3,13 +3,13 @@ package stepdefinitions.uisteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import pages.DoctorEditAppointmentPage;
-import pages.Signin;
+import pages.SignIn;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class Admin_US_20 {
     DoctorEditAppointmentPage dp=new DoctorEditAppointmentPage();
-    Signin signin =new Signin();
+    SignIn signIn =new SignIn();
 
     @Given("admin goes to medunna page")
     public void admin_goes_to_medunna_page() {
@@ -32,20 +32,21 @@ public class Admin_US_20 {
     }
     @Given("admin clicks administration button")
     public void admin_clicks_administration_button() {
-        Driver.waitAndClick(signin.adminMenu);
+        Driver.waitAndClick(signIn.adminMenu);
 
     }
 
     @When("admin cliks user manegement button")
     public void admin_cliks_user_manegement_button() {
-        Driver.waitAndClick(signin.userManegement);
+        Driver.waitAndClick(signIn.userManegement);
 
     }
 
 
     @When("admin clicks the delete buttonn")
     public void admin_clicks_the_delete_buttonn() {
-        Driver.waitAndClick(signin.deleteButton);
+
+        Driver.waitAndClick(signIn.deleteButton);
     }
 
 
