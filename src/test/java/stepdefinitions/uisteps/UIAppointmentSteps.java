@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.AppointmentPage;
 import pojos.Appointment;
+import utilities.ConfigurationReader;
 import utilities.DatabaseUtility;
 import utilities.Driver;
 
@@ -23,6 +24,13 @@ public class UIAppointmentSteps {
     AppointmentPage appointmentPage = new AppointmentPage();
     Faker faker = new Faker();
     Appointment appointment = new Appointment();
+
+    @Given("user goes the login pagee")
+    public void user_goes_the_login_pagee() {
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+    }
+
 
     @Given("user clicks on make an appointment")
     public void user_clicks_on_make_an_appointment() {
