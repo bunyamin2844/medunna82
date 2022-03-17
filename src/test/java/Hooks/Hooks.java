@@ -10,16 +10,24 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
+import static utilities.DatabaseUtility.createConnection;
+
 public class Hooks {
 
     @Before
     public void setUp(){
 
-
     }
 
     //
     public static RequestSpecification spec;
+
+    @Before( value = "@EndToEnd")
+    public void createNewDBConnection(){
+        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
+                ConfigurationReader.getProperty("db_username"),
+                ConfigurationReader.getProperty("db_password"));
+    }
 
     @Before( value = "@ApiRegistrant")
     public void setup(){
@@ -37,14 +45,20 @@ public class Hooks {
 
     }
 
+    @Before( value = "@PatientRegistrant")
+    public void setup2(){
+
+
+
+    }
+
+
     @Before(order = 1, value = "@Appointment")
     public void navigateToLandingPage(){
 
         Driver.getDriver().get(ConfigurationReader.getProperty("app_url"));
 
     }
-
-
 
     @After
     public void tearDown(Scenario scenario){

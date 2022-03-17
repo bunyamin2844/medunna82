@@ -8,6 +8,7 @@ import utilities.Driver;
 public class RegistrationPage {
 
     public RegistrationPage(){
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

@@ -315,4 +315,18 @@ public class Driver {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
+    public static void clearAndSendText(WebElement element, String value) {
+
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.clear();
+                Driver.waitAndSendText(element,value);
+                return;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+
+    }
+
 }
