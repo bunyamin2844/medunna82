@@ -43,5 +43,16 @@ public class AdminSignIn {
 
     @FindBy(xpath = "//span[contains(text(),'View')]")
     public WebElement viewButton;
+   ///////////////////////////////////////////////
+
+    @FindBy(xpath = "//*[@id='app-view-container']/div/div/div/div/div[2]/div[2]/div/nav/ul/li[6]/a")
+    public WebElement page147;
+    @FindBy(xpath = "//*[@id='bakalim']/td[11]/div/a[2]")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//*[@value='ROLE_USER']")
+    public WebElement roleUser;
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement saveButton;
 
 }
