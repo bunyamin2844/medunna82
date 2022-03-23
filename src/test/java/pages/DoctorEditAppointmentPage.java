@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DoctorEditAppointmentPage {
     public DoctorEditAppointmentPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -49,7 +50,7 @@ public class DoctorEditAppointmentPage {
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-    @FindBy(xpath ="//div[contains(text(),'The Appointment is updated with identifier 18721')]" )
+    @FindBy(xpath ="//div[contains(text(),'The Appointment is updated with identifier')]" )
     public WebElement appointmentUpdatedMessage;
 
     @FindBy(xpath = "//div[contains(text(),'This field is required.')]")
@@ -58,7 +59,7 @@ public class DoctorEditAppointmentPage {
     @FindBy(xpath = "//select[@id='appointment-status']/option")
     public List<WebElement> statusOptions;
 
-    //deneme
+
 
 
 
