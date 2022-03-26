@@ -140,6 +140,7 @@ public class RoomStepDef {
     @Then("admin take success message")
     public void admin_take_success_message() {
         Assert.assertTrue(roomPage.deleteMessage.isDisplayed());
+        //deneme
     }
 
 
