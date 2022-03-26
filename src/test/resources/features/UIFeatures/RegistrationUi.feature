@@ -1,6 +1,8 @@
-@Registration_all @smoke
+
+@Demo
+
 Feature: Registration_success_test
-  @username
+
   Scenario Outline: US02TC01_Choose_a_username_that_can_contain_any_chars_but_it_cannot_be_blank
 
     Given user is on the registration page
@@ -19,7 +21,7 @@ Feature: Registration_success_test
       | 223-93-9192 | ali       | bayram   | gglddfggbayramx | tffeasdfggm2a9test@gmail.com | Team82822 |  | Registration Saved |
 
 
-  @email1
+
   Scenario Outline: US02TC03_email_id_cannot_be_created_without_"@"_sign_and_".com"_extension
 
     Given user is on the registration page

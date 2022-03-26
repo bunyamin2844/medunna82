@@ -1,6 +1,6 @@
 Feature: Appointment api test
 
-
+  @Demo
   @ApiAppointmentPost
   Scenario Outline: appointment test
     Given user sets the path parameters

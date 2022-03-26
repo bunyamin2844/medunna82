@@ -18,10 +18,10 @@ public class TestItemStepDefs {
     TestItem testitemobject = new TestItem();
     Faker faker=new Faker();
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
+    @Given("users is on the login page")
+    public void users_is_on_the_login_page() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
     }
     @And("user enters in {string} {string} and clicks save button")
@@ -120,10 +120,5 @@ public class TestItemStepDefs {
         Assert.assertTrue(Driver.waitForVisibility(testitem.toastcontainer,5).isDisplayed());
 
     }
-    @Then("user records the test item datas")
-    public void user_records_the_test_item_datas() {
 
-      //  saveTestItemData(testitemobject);
-
-    }
 }

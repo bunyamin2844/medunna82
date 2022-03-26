@@ -32,14 +32,15 @@ public class PatInfoChangeStaffSteps {
 
     @When("staff types the username {string}")
     public void staffTypesTheUsername(String username) {
+
         page.username.sendKeys("halukdertli");
     }
 
-
-
     @When("staff types the password {string}")
     public void staffTypesThePassword(String password) {
+
         page.password.sendKeys("Haluk123.");
+
     }
 
 //    @And("staff clicks MYPAGES dropdown")
@@ -92,6 +93,7 @@ public class PatInfoChangeStaffSteps {
 
     @Then("verify the patient information are invoked")
     public void verifyThePatientInformationAreInvoked() {
+        Driver.wait(3);
         Assert.assertTrue(page.Result.isDisplayed());
     }
 

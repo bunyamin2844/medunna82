@@ -1,10 +1,10 @@
-@TestItem @smoke
+@Demo
 
   Feature: To_creatae_test_item
 
     Scenario Outline: to_create_a_test_item
 
-      Given user is on the login page
+      Given users is on the login page
       And user enters in "<username>" "<password>" and clicks save button
       And user clicks on ItemsTitles
       And user clicks on Test Item
@@ -17,7 +17,7 @@
       And user enters the day and time "<day and time>"
       Then user clicks on save button
       Then user validates that creation a test item is succesful
-      Then user records the test item datas
+
 
 
       Examples:

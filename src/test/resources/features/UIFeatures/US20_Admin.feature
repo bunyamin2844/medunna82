@@ -18,7 +18,7 @@ Feature: Admin delete users
 
 
 
-
+  @Demo
   Scenario Outline: US_20_TC_002_Admin edit exsisting user and gives new roles
     Given admin goes to medunna page
     And admin type the username "<username>"
@@ -28,15 +28,16 @@ Feature: Admin delete users
     And admin selects user and clicks edit button
     And admin gives user ROLE
     Then admin cliks save button
+    Then close driver
 
-    Examples:
+
     Examples:
       |username|password|
       |MedunnaAdmin|1@qweASD|
 
 
 
-
+  @Demo
   Scenario Outline: US_20_TC_003_Admin view registered people info
     Given admin goes to medunna page
     And admin type the username "<username>"

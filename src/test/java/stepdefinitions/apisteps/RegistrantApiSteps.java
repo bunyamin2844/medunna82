@@ -19,32 +19,9 @@ import static utilities.WriteToTxt.saveRegistrantData;
 
 public class RegistrantApiSteps  {
 
-  Registrant registrant = new Registrant();
-    Faker faker = new Faker();
-    Response response;
-import io.cucumber.java.tr.Fakat;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import pojos.Registrant;
-import utilities.ConfigurationReader;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static io.restassured.RestAssured.given;
-import static junit.framework.TestCase.assertEquals;
-import static utilities.ApiUtils.getRequest;
-import static utilities.Authentication.generateToken;
-import static utilities.WriteToTxt.saveRegistrantData;
-import static Hooks.Hooks.spec;
-public class RegistrantApiSteps  {
-
     Registrant registrant = new Registrant();
     Faker faker = new Faker();
     Response response;
-    Registrant []registrants;
 
     @Given("user sets the necessary path params")
     public void user_sets_the_necessary_path_params() {
@@ -80,8 +57,6 @@ public class RegistrantApiSteps  {
 
         response = given().spec(spec).contentType(ContentType.JSON).body(registrant).when().post("/{first}/{second}");
     }
-    @When("user saves the api records to correspondent files")
-    public void user_saves_the_api_records_to_correspondent_files() {
 
 
 
@@ -105,39 +80,8 @@ public class RegistrantApiSteps  {
         assertEquals(registrant.getLogin(), actualRegistrant.getLogin());
         assertEquals(registrant.getEmail(), actualRegistrant.getEmail());
 
-        assertEquals(registrant.getFirstName(), actualRegistrant.getFirstName());
-        assertEquals(registrant.getLastName(), actualRegistrant.getLastName());
-        assertEquals(registrant.getSsn(), actualRegistrant.getSsn());
 
 
     }
 
-
-
-
-    @Given("user sends the get request for users data")
-    public void user_sends_the_get_request_for_users_data() {
-
-
-        response = getRequest(generateToken(), ConfigurationReader.getProperty("api_appointments"));
-
-        //This can be also used
-        /*
-        response = given().headers(
-                "Authorization",
-                "Bearer " + token,
-                "Content-Type",
-                ContentType.JSON,
-                "Accept",
-                ContentType.JSON).when().get(endpoint);
-         */
-
-
-    }
-
-    }
-
-
-=======
->>>>>>> origin/ibrahim
 }

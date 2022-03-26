@@ -1,8 +1,9 @@
-@registration_api @smoke
+
+@Demo
 Feature: Registrant api test
 
 
-  @ApiRegistrant
+
   Scenario Outline: registrant test
     Given user sets the necessary path params
     And user sets the expected data "<firstname>", "<lastname>" "<SSN>" "<email>" "<username>" "<password>" and "<lan>"
@@ -11,9 +12,8 @@ Feature: Registrant api test
     Then user validates api records
 
     Examples: api test data
-      | firstname | lastname | SSN         | email           | username    | password  | lan |
-      | Recep     | Aykurt   | 293-38-2938 | recep@gmail.com | recepaykurt | Recep123. | en|
-
+      |firstname|lastname|SSN|email|username|password|lan|
+      |Team82 |UKTEAM  |384-37-3827|b001@gmail.com|ukteam|uk123.|en|
 
 
 

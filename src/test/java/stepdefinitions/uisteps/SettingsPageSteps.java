@@ -13,7 +13,7 @@ public class SettingsPageSteps {
     SettingsPage settingsPage=new SettingsPage();
     @Given("user on the Medunna Page")
     public void user_on_the_medunna_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("app_loginPage"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_signin_url"));
 
     }
     @Given("user enters username {string}")
@@ -66,6 +66,7 @@ public class SettingsPageSteps {
     }
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_signin_url"));
 
     }
 

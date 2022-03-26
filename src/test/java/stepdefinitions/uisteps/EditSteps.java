@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.uisteps;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
@@ -6,16 +6,18 @@ import pages.EditPage;
 import pages.PatientPage;
 import pages.RegistrationPage;
 import pojos.Registrant;
+import pojos.RegistrantUS22;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class EditSteps {
 
     Faker faker = new Faker();
-    Registrant registrant = new Registrant();//SAVE DATA AND REUSE DATA
+   // Registrant registrant = new Registrant();//SAVE DATA AND REUSE DATA
+    RegistrantUS22 registrant =new RegistrantUS22();
 
     RegistrationPage rp = new RegistrationPage();//INITIALIZED WEBELEMENTS
-    PatientPage ps = new PatientPage();
+    //PatientPage ps = new PatientPage();
     EditPage ed = new EditPage();
 
     @Given("user enters into medunna login url")
@@ -25,35 +27,38 @@ public class EditSteps {
 
     @When("user enters the username {string}")
     public void user_enters_the_username(String username) {
-        registrant.setUsernamet(username);
-        Driver.waitAndSendText(ps.username, username);
+        //registrant.setUsernamet(username);
+        Driver.waitAndSendText(ed.username, username);
     }
 
     @When("user enters password {string}")
     public void user_enters_password(String string) {
-        registrant.setPassword(string);
-        Driver.waitAndSendText(ps.password, string);
+       // registrant.setPassword(string);
+        Driver.waitAndSendText(ed.password, string);
     }
 
     @When("user clicks on sign in button")
     public void user_clicks_on_sign_in_button() {
-        Driver.waitAndClick(ps.Click);
+
+        Driver.waitAndClick(ed.Click);
     }
 
     @When("user navigates and clicks my pages")
     public void user_navigates_and_clicks_my_pages() {
+
         Driver.waitAndClick(ed.pages);
     }
 
     @When("selects on search patient button option")
     public void selects_on_search_patient_button_option() {
+
         Driver.waitAndClick(ed.searchp);
     }
 
     @When("user enters patient ssn {string}")
     public void user_enters_patient_ssn(String string) {
         Driver.waitAndClick(ed.SSN);
-        registrant.setSsn("185-82-6251");
+        //registrant.setSsn("185-82-6251");
     }
 
     //@When("navigates to show appointment and clicks on show appointment")

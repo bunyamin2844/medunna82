@@ -1,6 +1,6 @@
 Feature: Doctor login
 
-  @Doctor_login
+  @Demo
 
   Scenario Outline: login_with_username_and_password
     Given user is on the login page
@@ -16,6 +16,7 @@ Feature: Doctor login
 
 
     Scenario: doctor clicks on my pages
+      Given user is on the login page
       Given doctor clicks on my appointments
       And doctor clicks on patient edit button
       And doctor clicks on request inpatient button
