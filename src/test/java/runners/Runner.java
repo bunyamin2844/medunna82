@@ -16,5 +16,6 @@ import org.junit.runner.RunWith;
         tags = "@ApiRegistrant",
         dryRun = false
 )
+
 public class Runner {
 }

@@ -3,6 +3,7 @@ package pojos;
 public class Appointment {
 
 
+
     private String firstname;
     private String lastname;
     private String ssn;
@@ -73,7 +74,7 @@ public class Appointment {
         this.date = date;
     }
 
-    @Override
+    @Override // methode override yapar
     public String toString() {
         return "Appointment{" +
                 "firstname='" + firstname + '\'' +

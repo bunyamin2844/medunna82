@@ -13,7 +13,7 @@ public class AppointmentPage {
 
     }
 
-    @FindBy(xpath = "//*[text()='Make an']")
+    @FindBy(xpath = "//*[@id='header']/div/div/div[4]/a")
     public WebElement MakeAnAppointmentButton;
 
     @FindBy(id = "firstName")

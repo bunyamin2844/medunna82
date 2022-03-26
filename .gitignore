@@ -3,3 +3,10 @@
 target
 .DS_Store
 test-output
+Configuration.java
+Driver.java
+Configuration.properties
+pom.xml
+Hooks.java
+testdata
+.gitignore
