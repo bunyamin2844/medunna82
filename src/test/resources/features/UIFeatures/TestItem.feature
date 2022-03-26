@@ -17,6 +17,7 @@
       And user enters the day and time "<day and time>"
       Then user clicks on save button
       Then user validates that creation a test item is succesful
+      Then close driver
 
 
 

@@ -2,8 +2,8 @@ Feature: appointments test
 
 
 
+@Demo
 
-  @Appointment
   Scenario Outline: test appointments
     Given user goes the login pagee
     And user clicks on make an appointment

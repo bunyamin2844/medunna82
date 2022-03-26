@@ -30,7 +30,7 @@ Feature: Doctor edit appointment
       | headache  | medicine  | sinus     | paracetemol  | patient     |
 
 
-  @Demo
+
   Scenario Outline: US11_TC03 Doctor should not be able to edit appointment without typing in Anamnesis field
     And edit the appointment information: "<Anamnesis>", "<Treatment>", "<Diagnosis>", "<Prescription>", "<Description>"
     And click save button
@@ -61,7 +61,7 @@ Feature: Doctor edit appointment
       | Anamnesis | Treatment | Diagnosis | Prescription | Description |
       | headache  | medicine  |           | paracetemol  | patient     |
 
-  @test
+
   Scenario Outline: US11_TC06 Doctor should be able to edit appointment without editing prescription and description fields
     And edit the appointment information: "<Anamnesis>", "<Treatment>", "<Diagnosis>", "<Prescription>", "<Description>"
     And click save button
@@ -72,11 +72,7 @@ Feature: Doctor edit appointment
       | headache  | medicine  |   sinus   |              |             |
 
 
-  @test
-  Scenario: US11_07 User verifies that can only be set as PENDING, COMPLETED or CANCELLED
-      #Diger adimlar background'dan
-    # Deneme
-    Then verify that status can only be set as "PENDING", "COMPLETED" or "CANCELLED"
-    Then close driver
+
+
 
 
