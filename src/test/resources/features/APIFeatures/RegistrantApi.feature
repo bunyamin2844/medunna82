@@ -1,3 +1,4 @@
+@registration_api @smoke
 Feature: Registrant api test
 
 
@@ -10,14 +11,9 @@ Feature: Registrant api test
     Then user validates api records
 
     Examples: api test data
-      |firstname|lastname|SSN|email|username|password|lan|
-      |Recep    |Aykurt  |293-38-2938|recep@gmail.com|recepaykurt|Recep123.|en|
+      | firstname | lastname | SSN         | email           | username    | password  | lan |
+      | Recep     | Aykurt   | 293-38-2938 | recep@gmail.com | recepaykurt | Recep123. | en|
 
 
-  @ApiRegistrant
-  Scenario:  api get request for users
 
-    Given user sends the get request for users data
-    And user deserializes data to Java
-    And user saves the users data to correspondent files
 

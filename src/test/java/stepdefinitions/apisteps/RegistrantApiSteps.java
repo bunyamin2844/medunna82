@@ -1,10 +1,27 @@
 package stepdefinitions.apisteps;
+import org.checkerframework.checker.units.qual.C;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import pojos.Registrant;
+
+
+import static io.restassured.RestAssured.given;
+import static junit.framework.TestCase.assertEquals;
+
+import static Hooks.Hooks.spec;
+import static utilities.WriteToTxt.saveRegistrantData;
+
+public class RegistrantApiSteps  {
+
+  Registrant registrant = new Registrant();
+    Faker faker = new Faker();
+    Response response;
 import io.cucumber.java.tr.Fakat;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -33,7 +50,6 @@ public class RegistrantApiSteps  {
     public void user_sets_the_necessary_path_params() {
 
         spec.pathParams("first", "api", "second", "register");
-
 
     }
     @Given("user sets the expected data {string}, {string} {string} {string} {string} {string} and {string}")
@@ -66,6 +82,13 @@ public class RegistrantApiSteps  {
     }
     @When("user saves the api records to correspondent files")
     public void user_saves_the_api_records_to_correspondent_files() {
+
+
+
+    @When("user saves the api records to correspondent files")
+    public void user_saves_the_api_records_to_correspondent_files()
+    {
+
         saveRegistrantData(registrant);
     }
     @Then("user validates api records")
@@ -78,6 +101,9 @@ public class RegistrantApiSteps  {
         Registrant actualRegistrant = obj.readValue(response.asString(), Registrant.class);
 
         System.out.println(actualRegistrant);
+
+        assertEquals(registrant.getLogin(), actualRegistrant.getLogin());
+        assertEquals(registrant.getEmail(), actualRegistrant.getEmail());
 
         assertEquals(registrant.getFirstName(), actualRegistrant.getFirstName());
         assertEquals(registrant.getLastName(), actualRegistrant.getLastName());
@@ -108,21 +134,10 @@ public class RegistrantApiSteps  {
 
 
     }
-    @Given("user deserializes data to Java")
-    public void user_deserializes_data_to_java()throws Exception {
-        response.prettyPrint();
-        ObjectMapper obj = new ObjectMapper();
-//
-//        registrants = obj.readValue(response.asString(), Registrant[].class);
-//        System.out.println(registrants.length);
-//        for (int i=0; i< registrants.length; i++){
-//            System.out.println("name"+registrants[i].getFirstName());
-//        }
-    }
-    @Given("user saves the users data to correspondent files")
-    public void user_saves_the_users_data_to_correspondent_files() {
 
     }
 
 
+=======
+>>>>>>> origin/ibrahim
 }
