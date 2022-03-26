@@ -1,3 +1,4 @@
+@Demo
 @room_page
 Feature: login feature
   Scenario Outline: login_with_username_and_password
@@ -8,6 +9,8 @@ Feature: login feature
     Examples:
       |username   |password |
       |gulbahce|Gulbahce123.|
+
+
     Scenario Outline: entry room page
       When admin on the room click room button
       And admin create a new room
@@ -21,6 +24,7 @@ Feature: login feature
       Examples:
         |roomNumber|roomType|price|description|date|
         |24 |PREMIUM_DELUXE |1.500|hastamiz ozel bakilmali|05/12/2022T03:35 PM|
+
   Scenario Outline: for update and delete
     And admin on the room edit page
     And admin give a rooms numbers "<roomNumber>"

@@ -5,8 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import pages.PatientPage;
+import pages.StaffPaymentPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import static org.junit.Assert.assertTrue;
@@ -14,6 +18,10 @@ import static org.junit.Assert.assertTrue;
 public class PatInfoChangeStaffSteps {
 
     PatientPage page = new PatientPage();
+    StaffPaymentPage staffPaymentPage = new StaffPaymentPage();
+
+    @FindBy(xpath = "//a[@class='btn btn-warning btn-sm']")
+    public static WebElement showAppointmentsButton;
 
     @Given("user goes the login page")
     public void user_goes_the_login_page() {
@@ -24,12 +32,15 @@ public class PatInfoChangeStaffSteps {
 
     @When("staff types the username {string}")
     public void staffTypesTheUsername(String username) {
+
         page.username.sendKeys("halukdertli");
     }
 
     @When("staff types the password {string}")
     public void staffTypesThePassword(String password) {
+
         page.password.sendKeys("Haluk123.");
+
     }
 
 //    @And("staff clicks MYPAGES dropdown")
@@ -77,13 +88,41 @@ public class PatInfoChangeStaffSteps {
 
     @And("staff search a patient")
     public void staffSearchAPatient() {
-        Driver.waitAndSendText(page.patientSearchBox,"319-04-4812");
+        Driver.waitAndSendText(page.patientSearchBox,"345-13-7809");
     }
 
     @Then("verify the patient information are invoked")
     public void verifyThePatientInformationAreInvoked() {
+        Driver.wait(3);
         Assert.assertTrue(page.Result.isDisplayed());
     }
 
 
+
+    @And("staff clicks show appointments button")
+    public void staffClicksShowAppointmentsButton() {
+
+       Driver.waitAndClick(staffPaymentPage.showAppointmentsButton);
+
+//        for (int i = 0; i < 3; i++) {
+//
+//            Driver.getDriver().switchTo().activeElement().sendKeys(Keys.TAB);
+//        }
+//         Driver.getDriver().switchTo().activeElement().sendKeys(Keys.ENTER);
+         }
+
+
+    @Then("staff clicks payment button")
+    public void staffClicksPaymentButton() {
+        Driver.waitAndClick(staffPaymentPage.paymentButton);
+    }
+
+    @And("staff clicks show invoice button")
+    public void staffClicksShowInvoiceButton() {
+
+        Driver.waitAndClick(staffPaymentPage.showInvoiceButton);
+    }
+
 }
+
+

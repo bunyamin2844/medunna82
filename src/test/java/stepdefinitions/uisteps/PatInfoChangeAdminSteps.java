@@ -33,6 +33,7 @@ public class PatInfoChangeAdminSteps {
     @When("user clicks sign in button")
     public void user_clicks_sign_in_button() {
         page.signInButton.click();
+        Driver.wait(3);
     }
 
     @And("user goes to patient page")

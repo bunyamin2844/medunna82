@@ -1,39 +1,32 @@
 package stepdefinitions.apisteps;
+import org.checkerframework.checker.units.qual.C;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.tr.Fakat;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pojos.Registrant;
-import utilities.ConfigurationReader;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static junit.framework.TestCase.assertEquals;
-import static utilities.ApiUtils.getRequest;
-import static utilities.Authentication.generateToken;
-import static utilities.WriteToTxt.saveRegistrantData;
+
 import static Hooks.Hooks.spec;
+import static utilities.WriteToTxt.saveRegistrantData;
+
 public class RegistrantApiSteps  {
 
     Registrant registrant = new Registrant();
     Faker faker = new Faker();
     Response response;
-    Registrant []registrants;
 
     @Given("user sets the necessary path params")
     public void user_sets_the_necessary_path_params() {
 
         spec.pathParams("first", "api", "second", "register");
-
 
     }
     @Given("user sets the expected data {string}, {string} {string} {string} {string} {string} and {string}")
@@ -64,8 +57,13 @@ public class RegistrantApiSteps  {
 
         response = given().spec(spec).contentType(ContentType.JSON).body(registrant).when().post("/{first}/{second}");
     }
+
+
+
     @When("user saves the api records to correspondent files")
-    public void user_saves_the_api_records_to_correspondent_files() {
+    public void user_saves_the_api_records_to_correspondent_files()
+    {
+
         saveRegistrantData(registrant);
     }
     @Then("user validates api records")
@@ -79,50 +77,11 @@ public class RegistrantApiSteps  {
 
         System.out.println(actualRegistrant);
 
-        assertEquals(registrant.getFirstName(), actualRegistrant.getFirstName());
-        assertEquals(registrant.getLastName(), actualRegistrant.getLastName());
-        assertEquals(registrant.getSsn(), actualRegistrant.getSsn());
+        assertEquals(registrant.getLogin(), actualRegistrant.getLogin());
+        assertEquals(registrant.getEmail(), actualRegistrant.getEmail());
+
 
 
     }
-
-
-
-
-    @Given("user sends the get request for users data")
-    public void user_sends_the_get_request_for_users_data() {
-
-
-        response = getRequest(generateToken(), ConfigurationReader.getProperty("api_appointments"));
-
-        //This can be also used
-        /*
-        response = given().headers(
-                "Authorization",
-                "Bearer " + token,
-                "Content-Type",
-                ContentType.JSON,
-                "Accept",
-                ContentType.JSON).when().get(endpoint);
-         */
-
-
-    }
-    @Given("user deserializes data to Java")
-    public void user_deserializes_data_to_java()throws Exception {
-        response.prettyPrint();
-        ObjectMapper obj = new ObjectMapper();
-//
-//        registrants = obj.readValue(response.asString(), Registrant[].class);
-//        System.out.println(registrants.length);
-//        for (int i=0; i< registrants.length; i++){
-//            System.out.println("name"+registrants[i].getFirstName());
-//        }
-    }
-    @Given("user saves the users data to correspondent files")
-    public void user_saves_the_users_data_to_correspondent_files() {
-
-    }
-
 
 }

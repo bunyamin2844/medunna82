@@ -19,6 +19,7 @@ public class StaffEditAppointmentStepDef {
 
     @And("navigate to search patient page")
     public void navigateToSearchPatientPage() {
+        Driver.wait(2);
         Driver.waitAndClick(sp.myPagesDropDown);
         Driver.waitAndClick(sp.searchPatientLink);
 
@@ -93,6 +94,12 @@ public class StaffEditAppointmentStepDef {
 
     @Then("verify test results page")
     public void verifyTestResultsPage() {
+        Driver.wait(2);
         Assert.assertTrue(sp.testResultPageExpression.isDisplayed());
+    }
+
+    @Then("close driver")
+    public void closeDriver() {
+        Driver.closeDriver();
     }
 }

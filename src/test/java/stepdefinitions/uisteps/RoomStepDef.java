@@ -16,7 +16,7 @@ public class RoomStepDef {
 
     @Given("admin on the Login Medunna Page")
     public void admin_on_the_login_medunna_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("app_loginPage"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
     }
 
     @Given("admin enters username {string}")
@@ -111,7 +111,8 @@ public class RoomStepDef {
     }
     @Given("admin give a prices {string}")
     public void admin_give_a_prices(String string) {
-      Driver.waitAndSendText(roomPage.price,string);
+
+        Driver.waitAndSendText(roomPage.price,string);
     }
     @Given("admin give a descriptions {string}")
     public void admin_give_a_descriptions(String string) {

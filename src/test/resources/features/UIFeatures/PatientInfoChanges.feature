@@ -51,7 +51,7 @@ Feature:patient_info
     Then staff verify the patient page
 
 
-  @patient_edit_and_search_as_staff
+  @patient_edit_and_search_as_staff  ##
   Scenario: TC05-Patient_info_edit_as_a_staff
 
     Given user goes the login page
