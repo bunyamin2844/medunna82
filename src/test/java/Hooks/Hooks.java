@@ -29,7 +29,7 @@ public class Hooks {
                 ConfigurationReader.getProperty("db_password"));
     }
 
-    @Before( value = "@ApiRegistrant")
+    @Before( value = "@Demo")
     public void setup(){
 
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();

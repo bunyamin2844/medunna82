@@ -28,7 +28,7 @@ public class UIAppointmentSteps {
     @Given("user goes the login pagee")
     public void user_goes_the_login_pagee() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
     }
 
 

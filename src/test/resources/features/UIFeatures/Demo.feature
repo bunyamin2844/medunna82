@@ -14,7 +14,7 @@ Examples: test data
 |384-37-3827|Team82|UKTEAM|ukteam|uk@gmail.com|uk123.|
 
 
-  @Demo
+
   Scenario Outline: test appointments
     Given user clicks on make an appointment
     And user provides the appoinment name "<firstname>"
