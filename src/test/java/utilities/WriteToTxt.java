@@ -1,9 +1,6 @@
 package utilities;
 
-import pojos.Appointment;
-import pojos.PatientApi;
-import pojos.Registrant;
-import pojos.US07_AppointmentPost;
+import pojos.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -64,6 +61,27 @@ public class WriteToTxt {
             BufferedWriter writer = new BufferedWriter(fileWriter);
             writer.append(appointment + "\n");
             writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void saveTestItemData(TestItem testItemobject) {
+
+
+        try {
+
+            String target = System.getProperty("user.dir") + "/src/resources/testdata/TestItemData.txt";
+
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("test_item_file_name"), true);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(testItemobject +"\n");
+
+
+            writer.close();
+
 
         } catch (Exception e) {
             e.printStackTrace();
