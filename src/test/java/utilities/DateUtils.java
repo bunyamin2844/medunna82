@@ -9,7 +9,7 @@ public class DateUtils {
 
     public static String getDate(){
         LocalDateTime dateObj = LocalDateTime.now();
-        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
         return dateObj.format(formatDate);
     }

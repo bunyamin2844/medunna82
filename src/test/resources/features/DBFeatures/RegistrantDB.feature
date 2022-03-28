@@ -13,3 +13,4 @@ Feature: DB Registrants tests
     Examples: test data
       |query|columnName|
       |Select * from jhi_user|ssn|
+

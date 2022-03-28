@@ -2,6 +2,7 @@ package stepdefinitions.uisteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.DoctorEditAppointmentPage;
 import pages.AdminSignIn;
@@ -65,15 +66,37 @@ public class Admin_US_20 {
     }
     @Given("admin clicks the view button")
     public void admin_clicks_the_view_button() {
+        Driver.waitAndClick(adminSignIn.viewButton);
 
     }
 
     @Given("admin verifies all user's info")
     public void admin_verifies_all_user_s_info() {
 
+
     }
 
 
+    @And("admin gives user ROLE")
+    public void adminGivesUserROLE() {
+        Driver.waitAndClick(adminSignIn.roleUser);
+    }
 
+    @And("admin selects user and clicks edit button")
+    public void adminSelectsUserAndClicksEditButton() {
+        Driver.waitAndClick(adminSignIn.editButton);
+
+    }
+
+    @Then("admin cliks save button")
+    public void adminCliksSaveButton() {
+        Driver.waitAndClick(adminSignIn.saveButton);
+    }
+
+    @And("admin goes to user management page")
+    public void adminGoesToUserManagementPage() {
+        Driver.waitAndClick(adminSignIn.adminMenu);
+        Driver.waitAndClick(adminSignIn.userManegement);
+    }
 }
 
